@@ -1,0 +1,195 @@
+/*
+ * Basit ve modern biyografi sayfası stili.
+ * @irmakcora'nın Linktree sayfasını geliştirerek daha zengin bir görünüm sunar.
+ */
+
+/* Değişkenler */
+:root {
+  --bg-color: #f7f7f7;
+  --primary-color: #39e09b;
+  --youtube-color: #ff3e3e;
+  --udemy-color: #a435f0;
+  --podcast-color: #1db954;
+  --tiktok-color: #010101;
+  --website-color: #05668d;
+  --shop-color: #f47b20;
+  --yoga-color: #50b888;
+  --imdb-color: #f5c518;
+  --text-color: #333333;
+  --card-radius: 10px;
+}
+
+/* Genel reset ve tipografi */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Profil bölümü */
+.profile {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #e8fefa 100%);
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.profile .tagline {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Link kartları */
+.links {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: var(--card-radius);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link-card .emoji {
+  font-size: 1.5rem;
+}
+
+.link-card .title {
+  flex: 1;
+  white-space: normal;
+}
+
+/* Özel renkler */
+.link-card.youtube { background-color: var(--youtube-color); }
+.link-card.udemy { background-color: var(--udemy-color); }
+.link-card.podcast { background-color: var(--podcast-color); }
+.link-card.tiktok { background-color: var(--tiktok-color); }
+.link-card.website { background-color: var(--website-color); }
+.link-card.shop { background-color: var(--shop-color); }
+.link-card.yoga { background-color: var(--yoga-color); }
+.link-card.imdb { background-color: var(--imdb-color); color: #222222; }
+
+/* İletişim bölümü */
+.contact-section {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 24px 20px;
+  background: #ffffff;
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.contact-section p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(57, 224, 155, 0.2);
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2dcc8c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+@media (min-width: 640px) {
+  .links {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 16px;
+  }
+}
